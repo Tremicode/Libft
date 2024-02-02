@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:45:16 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/02 00:50:37 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/02 18:21:32 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,4 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	printf("long total: %zu\n", len);
 
 	return (0);
-}*/
+}*/ 
