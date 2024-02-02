@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 15:14:28 by ctremino          #+#    #+#             */
-/*   Updated: 2024/01/23 15:42:48 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/02 00:57:20 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ char	*ft_strrchr(const char *str, int c)
 	{
 		if (*str == c)
 			last_ocurrence = str;
+		str++;
 	}
-	str++;
+	if (c == '\0')
+		return ((char *)str);
 	return ((char *)last_ocurrence);
 }
 

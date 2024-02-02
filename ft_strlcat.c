@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:45:16 by ctremino          #+#    #+#             */
-/*   Updated: 2024/01/23 15:43:37 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/02 00:50:37 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,23 @@
 
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	size_t	src_len;
 	size_t	dst_len;
+	size_t	i;
 
-	if (dstsize == 0)
-		return (src_len);
-	if (dst_len >= dstsize)
-		return (src_len + dstsize);
-	while (*src && --dstsize)
-		*dst++ = *src++;
-	*dst = '\0';
-	return (dst_len + src_len);
+	dst_len = 0;
+	while (dst_len < dstsize && dst[dst_len] != '\0')
+		dst_len++;
+	if (dstsize <= dst_len)
+		return (dstsize + ft_strlen(src));
+	i = 0;
+	while (src[i] != '\0' && dst_len + 1 < dstsize)
+	{
+		dst[dst_len] = src[i];
+		dst_len++;
+		i++;
+	}
+	dst[dst_len] = '\0';
+	return (dst_len + ft_strlen(&src[i]));
 }
 /*int	main(void)
 {

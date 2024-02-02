@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:57:44 by ctremino          #+#    #+#             */
-/*   Updated: 2024/01/31 20:27:04 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/01 23:26:20 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,17 @@ int		ft_isalnum(int c);
 /*verifica si un caracter es alphanumerico*/
 int		ft_isprint(int c);
 
+int		ft_isascii(int c);
+
 int		ft_atoi(const char *str);
 
 int		ft_strcmp(const char *s1, const char *s2);
 
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
 int 	ft_memcmp(const void *s1, const void *s2, size_t n);
+
+void	*ft_memchr(const void *s, int c, size_t n);
 
 void	*ft_calloc(size_t count, size_t size);
 
@@ -51,8 +57,14 @@ size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
+
 char	*ft_strchr(const char *s, int c);
 
 char	*ft_strdup(const char *s1);
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+char	*ft_strrchr(const char *str, int c);
 
 #endif
