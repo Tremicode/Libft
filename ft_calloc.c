@@ -6,12 +6,11 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:58:19 by ctremino          #+#    #+#             */
-/*   Updated: 2024/01/26 11:00:41 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/02 18:34:57 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -29,7 +28,9 @@ void	*ft_calloc(size_t count, size_t size)
 /*
 int	main(void)
 {
-	int *array = (int *)ft_calloc(4, sizeof(int));
+	int	*array;
+
+	array = (int *)ft_calloc(4, sizeof(int));
 		asignar memoria para array
 	if (array == NULL)
 	{
