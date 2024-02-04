@@ -25,7 +25,8 @@ SOURCES = 	ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			ft_strdup.c  \
-			ft_strnstr.c
+			ft_strnstr.c \
+			ft_substr.c
 			
 			
 #declaracion de variable con los archivos ejecutables.

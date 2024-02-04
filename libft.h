@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:57:44 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/01 23:26:20 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/04 15:36:36 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 char	*ft_strrchr(const char *str, int c);
+
+char	*ft_substr(char const*s,unsigned int start,size_t len);
 
 #endif

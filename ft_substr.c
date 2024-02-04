@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 12:22:06 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/03 12:52:47 by ctremino         ###   ########.fr       */
+/*   Created: 2024/02/03 16:52:07 by ctremino          #+#    #+#             */
+/*   Updated: 2024/02/04 15:52:14 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
-
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
+	char	*substr;
+	size_t	slen;
 
-	i = 0;
-	while (i < len)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
+	if (!s)
+		return (NULL);
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
+	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!substr)
+		return (NULL);
+	ft_memcpy(substr, s + start, len);
+	substr[len] = '\0';
+	return (substr);
 }
-
-/*int	main(void)
-{
-	char s[20] = "hola a todos";
-	s[1] = '0';
-	printf("%s\n", s);
-	return (0);
-}*/
