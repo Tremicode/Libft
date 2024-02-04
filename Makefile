@@ -28,7 +28,8 @@ SOURCES = 	ft_atoi.c \
 			ft_strnstr.c \
 			ft_substr.c \
 			ft_strjoin.c \
-			ft_strtrim.c
+			ft_strtrim.c \
+			ft_split.c
 			
 			
 #declaracion de variable con los archivos ejecutables.
