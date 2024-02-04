@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:57:44 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/04 17:16:59 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/04 17:35:38 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ char	*ft_strrchr(const char *str, int c);
 char	*ft_substr(char const*s,unsigned int start,size_t len);
 
 char	*ft_strjoin(char const *s1, char const *s2);
+
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
