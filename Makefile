@@ -41,7 +41,7 @@ SOURCES = 	ft_atoi.c \
 OBJECTS = $(SOURCES:.c=.o)
 #declaramos variables archivos objeto .c y .o.
 CC = gcc 
-CCFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 #declaramos la variable para el comando clean.
 all: $(NAME)
