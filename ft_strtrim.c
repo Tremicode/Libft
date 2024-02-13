@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 17:34:24 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/04 18:08:51 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:07:13 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	if (start == end + 1)
 		return (ft_strdup(""));
-			/*verifica si la cadena esta compuesta por caracteres set*/
+	/*verifica si la cadena esta compuesta por caracteres set*/
 	while (ft_strchr(set, s1[end]))
 		end--;
 	resulttrimmed = ft_substr(s1, start, end - start + 1);

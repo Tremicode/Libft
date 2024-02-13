@@ -6,12 +6,11 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 19:42:52 by ctremino          #+#    #+#             */
-/*   Updated: 2024/01/29 22:30:57 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:04:30 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	*ft_memset(void *b, int c, size_t len)
 {

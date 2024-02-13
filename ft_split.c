@@ -6,14 +6,14 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 18:11:42 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/08 12:20:03 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:05:28 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	ft_wordlen(char const *s, char c)
-		/*fun auxiliar calcula long de una palabra */
+/*fun auxiliar calcula long de una palabra */
 {
 	int len = 0;
 	while (*s && *s != c)
@@ -24,7 +24,7 @@ static int	ft_wordlen(char const *s, char c)
 	return (len);
 }
 static int	ft_countwords(char const *s, char c)
-		/* fun aux para contar palabras en la cadena*/
+/* fun aux para contar palabras en la cadena*/
 {
 	int count = 0;
 	while (*s)
@@ -43,7 +43,7 @@ static void	free_strs(char **strs) /* funcion añadida para liberar memoria*/
 {
 	int i = 0;
 	while (strs[i])
-		
+
 	{
 		free(strs[i]);
 		i++;
@@ -51,7 +51,7 @@ static void	free_strs(char **strs) /* funcion añadida para liberar memoria*/
 	free(strs); /*liberia memoria asignada en el arreglo*/
 }
 char	**ft_split(char const *s, char c)
-		/*funcion principal para dividir la cadena en palabras*/
+/*funcion principal para dividir la cadena en palabras*/
 {
 	char **strs;
 	int i;
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		if (*s != c)
 		{
 			strs[i] = ft_substr(s, 0, ft_wordlen(s, c));
-				/* extraer subcadema y almacenar en el arreglo*/
+			/* extraer subcadema y almacenar en el arreglo*/
 			if (!strs[i])
 			{
 				free_strs(strs);
