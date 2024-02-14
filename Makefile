@@ -38,7 +38,7 @@ SOURCES = 	ft_atoi.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 			
-BSOURCES = 	ft_lstnew.c	\	
+BSOURCES = 	ft_lstnew.c	
 #declaracion de variable con los archivos ejecutables.
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
@@ -51,16 +51,16 @@ RM = rm -f
 $(NAME): $(OBJECTS) $(INCLUDE)
 	$(LIB) $(NAME) $(OBJECTS)
 #compilamos la libreria.
-bonus: $(BOJECTS) $(INCLUDE)
+bonus: $(BOBJECTS)
 		$(LIB) $(NAME) $(BOBJECTS)
 %.o: %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 #esto es el borrado de objetos
 clean:
-	$(RM) $(OBJECTS) $(BOJECTS)
+	$(RM) $(OBJECTS) $(BOBJECTS)
 #borrado de los objetos y del ejecutable.
 fclean: clean 	
-	$(RM) $(NAME) $(BOJECTS)
+	$(RM) $(NAME) $(BOBJECTS)
 
 #declaramos la variable para el comando clean.
 all: $(NAME)
@@ -71,5 +71,5 @@ re:	fclean all
 .PHONY: bonus all clean fclean re
 #sirve para indicar que no cree ningun archivo con estos nombres.
 
-comprueba: 
-	ar t $(NAME)
+##comprueba: 
+##	ar t $(NAME)
