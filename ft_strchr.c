@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 15:34:17 by ctremino          #+#    #+#             */
-/*   Updated: 2024/01/30 12:20:51 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:20:29 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ char	*ft_strchr(const char *str, int c)
 		str++;
 	if (*str == (char)c)
 		return ((char *)str);
-
-		return NULL;
+	return (NULL);
 }
 
 /*int	main(void)

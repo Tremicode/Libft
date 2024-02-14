@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:57:44 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/12 12:01:11 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/13 21:52:03 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 int		ft_toupper(int c);
 /*int cambiar a mayusculas*/
@@ -90,4 +96,5 @@ char	*ft_itoa(int n);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
+t_list	*ft_lstnew(void *content);
 #endif

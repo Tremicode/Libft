@@ -1,5 +1,5 @@
 INCLUDE = libft.h
-LIB = ar rcs
+LIB = ar -rcs
 NAME = libft.a
 #este es nombre de nuestro ejecutable.
 SOURCES = 	ft_atoi.c \
@@ -38,30 +38,36 @@ SOURCES = 	ft_atoi.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 			
-			
+BSOURCES = 	ft_lstnew.c	\	
 #declaracion de variable con los archivos ejecutables.
 OBJECTS = $(SOURCES:.c=.o)
+BOBJECTS = $(BSOURCES:.c=.o)
 #declaramos variables archivos objeto .c y .o.
 CC = gcc 
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
-#declaramos la variable para el comando clean.
-all: $(NAME)
+
 #esta es la funcion principal.
 $(NAME): $(OBJECTS) $(INCLUDE)
 	$(LIB) $(NAME) $(OBJECTS)
 #compilamos la libreria.
+bonus: $(BOJECTS) $(INCLUDE)
+		$(LIB) $(NAME) $(BOBJECTS)
 %.o: %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 #esto es el borrado de objetos
 clean:
-	$(RM) $(OBJECTS) $(OBJECTS_B)
+	$(RM) $(OBJECTS) $(BOJECTS)
 #borrado de los objetos y del ejecutable.
 fclean: clean 	
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(BOJECTS)
+
+#declaramos la variable para el comando clean.
+all: $(NAME)
 #borrado de ejecutable y los objetos.
 re:	fclean all
 #borrado de todo los bonus
+
 .PHONY: bonus all clean fclean re
 #sirve para indicar que no cree ningun archivo con estos nombres.
 

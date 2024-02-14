@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:22:06 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/03 12:52:47 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:11:59 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t len)
 
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < len)

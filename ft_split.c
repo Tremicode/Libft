@@ -6,14 +6,13 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 18:11:42 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/13 12:05:28 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:19:54 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	ft_wordlen(char const *s, char c)
-/*fun auxiliar calcula long de una palabra */
 {
 	int len = 0;
 	while (*s && *s != c)
