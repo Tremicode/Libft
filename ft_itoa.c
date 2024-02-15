@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:16:26 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/15 16:58:44 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:48:44 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	ft_digit_count(int n)
 	}
 	return (count);
 }
+
 char	*ft_itoa(int n)
 {
 	int		ncpy;
@@ -36,15 +37,13 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	/* duplica la cadena,devuelve un nuevo bloque de memoria para que itoa apunte a una direcion unica */
 	ncpy = n;
 	if (n < 0)
 		ncpy = -n;
 	i = ft_digit_count(n);
-	str = malloc(sizeof(char) * (i + 1));
+	str = ft_calloc(sizeof(char), i + 1);
 	if (!str)
 		return (NULL);
-	str[i] = '\0';
 	i--;
 	if (ncpy == 0)
 		str[i] = '0';
