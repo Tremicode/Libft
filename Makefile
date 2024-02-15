@@ -38,7 +38,7 @@ SOURCES = 	ft_atoi.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 			
-BSOURCES = 	ft_lstnew.c	
+BSOURCES = 	ft_lstnew_bonus.c	
 #declaracion de variable con los archivos ejecutables.
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)

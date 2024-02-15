@@ -6,24 +6,21 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:16:26 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/10 13:48:10 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/15 16:58:44 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	ft_digit_count(int n)
-/*funcion auxiliar para saber catidad de digitos que tiene un numero entero */
 {
-	int count;
-	count = 0;
+	int	count;
 
+	count = 0;
 	if (n == 0)
 		return (1);
-
 	if (n < 0)
 		count++;
-
 	while (n != 0)
 	{
 		n /= 10;
@@ -38,8 +35,8 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648")); /* duplica la cadena,
-			devuelve un nuevo bloque de memoria para que itoa apunte a una direcion unica */
+		return (ft_strdup("-2147483648"));
+	/* duplica la cadena,devuelve un nuevo bloque de memoria para que itoa apunte a una direcion unica */
 	ncpy = n;
 	if (n < 0)
 		ncpy = -n;

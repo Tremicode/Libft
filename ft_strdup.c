@@ -6,11 +6,14 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:15:56 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/13 12:05:57 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/14 13:35:35 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* calcula long cadena de entrada, da memoria a la cadena nueva,
+	copoia el contenido de la cadena original a la cadena nueva*/
 
 char	*ft_strdup(const char *s1)
 {
@@ -18,13 +21,10 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 
 	len = ft_strlen(s1);
-	/*calcula long cadena de entrada*/
 	duplicado = malloc(sizeof(char) * (len + 1));
-	/*dar memoria a la cadena nueva*/
 	if (!duplicado)
 		return (NULL);
 	ft_strlcpy(duplicado, s1, len + 1);
-	/*copia el contenido de la cadena original a la cadena nueva*/
 	return (duplicado);
 }
 
@@ -40,7 +40,7 @@ int	main(void)
 		printf("Cadena original: %s\n", original);
 		printf("Cadena duplicada: %s\n", duplicado);
 
-		// Recuerda liberar la memoria asignada dinámicamente cuando ya no la necesites
+
 		free(duplicado);
 	}
 	else
