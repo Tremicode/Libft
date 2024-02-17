@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:57:44 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/16 22:26:43 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/17 13:44:39 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,9 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 t_list				*ft_lstnew(void *content);
 
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void				ft_lstadd_front(t_list **lst, t_list *new);
 
-int 	ft_lstsize(t_list *lst);
+int					ft_lstsize(t_list *lst);
+
+t_list				*ft_lstlast(t_list *lst);
 #endif
