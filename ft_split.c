@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 18:11:42 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 15:58:03 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:55:35 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static int	ft_wordlen(char const *s, char c)
 	}
 	return (len);
 }
+
 static int	ft_countwords(char const *s, char c)
 {
 	int	count;
@@ -41,9 +42,10 @@ static int	ft_countwords(char const *s, char c)
 	}
 	return (count);
 }
-static void	free_strs(char **strs)
+
+static void	*free_strs(char **strs)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (strs[i])
@@ -52,7 +54,9 @@ static void	free_strs(char **strs)
 		i++;
 	}
 	free(strs);
+	return (NULL);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
@@ -72,13 +76,9 @@ char	**ft_split(char const *s, char c)
 		if (*s != c)
 		{
 			strs[i] = ft_substr(s, 0, ft_wordlen(s, c));
-			if (!strs[i])
-			{
-				free_strs(strs);
-				return (NULL);
-			}
+			if (!strs[i++])
+				return (free_strs(strs));
 			s += ft_wordlen(s, c);
-			i++;
 		}
 		else
 			s++;
