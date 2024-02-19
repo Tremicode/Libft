@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 14:14:46 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 13:47:11 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/19 15:47:55 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	result[i] = '\0';
-
 	return (result);
 }
+

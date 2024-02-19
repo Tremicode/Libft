@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 18:11:42 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 14:51:33 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/19 15:58:03 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 static int	ft_wordlen(char const *s, char c)
 {
-	int	len = 0;
+	int	len;
+
+	len = 0;
 	while (*s && *s != c)
 	{
 		len++;
@@ -23,9 +25,10 @@ static int	ft_wordlen(char const *s, char c)
 	return (len);
 }
 static int	ft_countwords(char const *s, char c)
-/* fun aux para contar palabras en la cadena*/
 {
-	int	count = 0;
+	int	count;
+
+	count = 0;
 	while (*s)
 	{
 		if (*s != c)
@@ -38,40 +41,37 @@ static int	ft_countwords(char const *s, char c)
 	}
 	return (count);
 }
-static void	free_strs(char **strs) /* funcion añadida para liberar memoria*/
+static void	free_strs(char **strs)
 {
-	int	i = 0;
-	while (strs[i])
+	int	i;
 
+	i = 0;
+	while (strs[i])
 	{
 		free(strs[i]);
 		i++;
 	}
-	free(strs); /*liberia memoria asignada en el arreglo*/
+	free(strs);
 }
 char	**ft_split(char const *s, char c)
-/*funcion principal para dividir la cadena en palabras*/
 {
-	char **strs;
-	int i;
-	int count;
+	char	**strs;
+	int		i;
+	int		count;
 
-	if (!s) /*verifica si la cadena de entrada es nula*/
+	if (!s)
 		return (NULL);
-
 	count = ft_countwords(s, c);
 	strs = malloc(sizeof(char *) * (count + 1));
-
 	if (!strs)
 		return (NULL);
-	strs[count] = NULL; /*marca el final del arreglo */
+	strs[count] = NULL;
 	i = 0;
 	while (*s)
 	{
 		if (*s != c)
 		{
 			strs[i] = ft_substr(s, 0, ft_wordlen(s, c));
-			/* extraer subcadema y almacenar en el arreglo*/
 			if (!strs[i])
 			{
 				free_strs(strs);
