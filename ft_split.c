@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 18:11:42 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/13 12:19:54 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/19 14:51:33 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_wordlen(char const *s, char c)
 {
-	int len = 0;
+	int	len = 0;
 	while (*s && *s != c)
 	{
 		len++;
@@ -25,7 +25,7 @@ static int	ft_wordlen(char const *s, char c)
 static int	ft_countwords(char const *s, char c)
 /* fun aux para contar palabras en la cadena*/
 {
-	int count = 0;
+	int	count = 0;
 	while (*s)
 	{
 		if (*s != c)
@@ -40,7 +40,7 @@ static int	ft_countwords(char const *s, char c)
 }
 static void	free_strs(char **strs) /* funcion añadida para liberar memoria*/
 {
-	int i = 0;
+	int	i = 0;
 	while (strs[i])
 
 	{
