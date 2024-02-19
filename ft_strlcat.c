@@ -6,13 +6,13 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:45:16 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/02 18:21:32 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:29:59 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;
 	size_t	i;

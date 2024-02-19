@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:57:44 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 13:29:13 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:36:19 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ size_t				ft_strlen(const char *s);
 
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
-size_t				ft_strlcat(char *restrict dst, const char *restrict src,
+size_t				ft_strlcat(char *dst, const char *src,
 						size_t dstsize);
 
 char				*ft_strchr(const char *s, int c);
