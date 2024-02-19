@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 12:22:06 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 11:37:20 by ctremino         ###   ########.fr       */
+/*   Created: 2024/02/19 10:46:45 by ctremino          #+#    #+#             */
+/*   Updated: 2024/02/19 11:05:38 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
-
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t i;
+	if (lst != NULL && f != NULL)
 
-	i = 0;
-	while (i < len)
 	{
-		((char *)s)[i] = 0;
-		i++;
+		ft_lstiter(lst->next, f);
+		f(lst->content);
 	}
 }
-
-/*int	main(void)
-{
-	char	s[20] = "hola a todos";
-
-	s[2] = '0';
-	printf("%s\n", s);
-	return (0);
-}*/
