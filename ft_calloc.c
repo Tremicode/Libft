@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:58:19 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/02 18:34:57 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/18 17:57:23 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(void)
 	array[1] = 1;
 	array[2] = 2;
 	array[3] = 3;
-	printf("%d %d %d %d\n", array[0], array[1], array[2], array[3]);
+	printf("%d %d %d %d\n", array[0], array[1], array[2], array[3]);,
 	free(array);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 14:14:46 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/10 18:07:00 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:40:01 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t len = 0;
 	while (s[len])
 		len++;
-
 	char *result = malloc(len + 1);
 	if (!result)
 		return (NULL);

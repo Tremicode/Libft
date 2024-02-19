@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 13:30:19 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/17 13:46:32 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:45:50 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ t_list	*ft_lstlast(t_list *lst)
 	{
 		lst = lst->next;
 	}
-
-	return lst;
+	return (lst);
 }

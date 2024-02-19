@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:57:44 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/17 13:44:39 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/18 18:52:31 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,4 +104,8 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
 
 t_list				*ft_lstlast(t_list *lst);
+
+void				ft_lstadd_back(t_list **lst, t_list *new);
+
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
 #endif
