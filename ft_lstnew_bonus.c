@@ -6,12 +6,11 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 17:23:10 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/15 17:23:17 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/22 17:17:13 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdio.h>*/
 
 t_list	*ft_lstnew(void *content)
 {
@@ -24,8 +23,8 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-
-/*int	main(void)
+/*#include <stdio.h>
+int	main(void)
 {
 	t_list	*new_nodo;
 

@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 19:42:52 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/13 12:04:30 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/22 17:20:49 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,18 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-/*int	main(void)
-{
-	char arr[15] = "Testeo";
-	size_t len;
-	len = 3;
-	printf("Pre-memset: %s\n", arr + 2);
-	ft_memset(arr + 2, 'p', len);
-	printf("Post-memset: %s\n", arr);
-	return (0);
+/*#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // Definimos un buffer de caracteres
+    char buffer[10];
+
+    // Llenamos el buffer con el carácter 'A' utilizando ft_memset
+    ft_memset(buffer, 'B', 10);
+
+    // Imprimi contenido del buffer para verificar llenado ok
+    printf("El contenido del buffer es: %s\n", buffer);
+
+    return 0;
 }*/

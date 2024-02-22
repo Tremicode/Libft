@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 16:52:07 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/04 15:52:14 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/22 16:27:43 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[len] = '\0';
 	return (substr);
 }
+/*#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+    // Definimos una cadena de caracteres
+    char *cadena = "Esto es una cadena de ejemplo";
+
+    // Extraemos una subcadena de longitud 10, comenzando desde el índice 5
+    char *subcadena = ft_substr(cadena, 5, 10);
+
+    // Imprimimos la subcadena resultante
+    printf("La subcadena es: %s\n", subcadena);
+
+    // Liberamos la memoria asignada para la subcadena
+    free(subcadena);
+
+    return 0;
+}*/

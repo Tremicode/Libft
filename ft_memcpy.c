@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:24:16 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/13 12:03:31 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/22 17:23:41 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,21 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+/*#include <stdio.h>
+#include <stdlib.h> // Incluimos esta librería para usar la función malloc
 
-/*int	main(void)
-{
-	char	origen[] = "hola mundo";
-	char	destino[7];
+int main() {
+    // Definimos una cadena de caracteres de src
+    char src[] = "Hello, world!";
+    // Declar un buffer dest con espacio para almacenar la cadena de src
+    char dest[20];
 
-	ft_memcpy(destino, origen, sizeof(origen));
-	printf("%s\n", destino);
-	printf("%s", ft_memcpy(((void *) 0), ((void *) 0), 0));
-	printf("%s", memcpy(((void *) 0), ((void *) 0), 0));
-	return (0);
+    // Copy cadena src en el buffer de dest utilizando ft_memcpy
+    ft_memcpy(dest, src, 13); // Copy 13 caracter (incluyendo el null)
+
+    // print la cadena de dest para verificar si se copió ok
+
+    printf("La cadena de destino es: %s\n", dest);
+
+    return 0;
 }*/

@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 17:34:24 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 14:47:58 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/22 17:15:08 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,27 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (resulttrimmed);
 }
+/*#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    //Definimos una cadena de caract de ejemplo y caract recortar
+    const char *cadena = "  \tHola, mundo! \t ";
+    const char *set = " \t";
+
+    // Llamamos a ft_strtrim para recortar la cadena
+    char *cadena_recortada = ft_strtrim(cadena, set);
+
+    // Verificamos si el recorte fue exitoso
+    if (cadena_recortada != NULL) {
+        // Imprimimos la cadena recortada
+        printf("Cadena recortada: \"%s\"\n", cadena_recortada);
+        
+        // Liberamos la memoria asignada para la cadena recortada
+        free(cadena_recortada);
+    } else {
+        printf("Error: No se pudo recortar la cadena.\n");
+    }
+
+    return 0;
+}*/

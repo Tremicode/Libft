@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:15:56 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/21 17:18:52 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:59:10 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,26 @@ char	*ft_strdup(const char *s1)
 }
 
 /*#include <stdio.h>
-
-int	main(void)
-{
-	const char *original = "Hola, mundo!";
-	char *duplicado = ft_strdup(original);
-
-	if (duplicado)
-	{
-		printf("Cadena original: %s\n", original);
-		printf("Cadena duplicada: %s\n", duplicado);
+#include <stdlib.h>
 
 
-		free(duplicado);
-	}
-	else
-	{
-		printf("Error al duplicar la cadena.\n");
-	}
+int main() {
+    // Definimos una cadena de caracteres
+    const char *cadena_original = "Hola, mundo!";
 
-	return (0);
+    // Duplicamos la cadena utilizando ft_strdup
+    char *cadena_duplicada = ft_strdup(cadena_original);
+
+    // Verificamos si la duplicación fue exitosa
+    if (cadena_duplicada != NULL) {
+        // Imprimimos la cadena duplicada
+        printf("Cadena duplicada: %s\n", cadena_duplicada);
+        
+        // Liberamos la memoria asignada para la cadena duplicada
+        free(cadena_duplicada);
+    } else {
+        printf("Error: No se pudo duplicar la cadena.\n");
+    }
+
+    return 0;
 }*/
