@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:16:26 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/16 15:17:57 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/22 18:45:08 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,25 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+/*#include <stdio.h>
+
+int main() {
+    int num = 1234500; // Número entero a convertir
+    char *str_num; // Variable para almacenar la cadena resultante
+
+    // Llamada a la función ft_itoa para convertir el número entero en una cadena
+    str_num = ft_itoa(num);
+
+    // Verificación de si la conversión fue exitosa
+    if (str_num != NULL) {
+        // Imprimir la cadena resultante
+        printf("El número %d convertido en cadena es: %s\n", num, str_num);
+        
+        // Liberar la memoria asignada a la cadena resultante
+        free(str_num);
+    } else {
+        printf("Error: No se pudo convertir el número en una cadena.\n");
+    }
+
+    return 0;
+}*/
