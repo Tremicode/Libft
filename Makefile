@@ -1,7 +1,10 @@
-INCLUDE = libft.h
-LIB = ar -rcs
 NAME = libft.a
-#este es nombre de nuestro ejecutable.
+NAME_BONUS = .bonus
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+AR = ar
+ARFLAGS = -rcs
+
 SOURCES = 	ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
@@ -51,18 +54,20 @@ BSOURCES = 	ft_lstnew_bonus.c \
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
 #declaramos variables archivos objeto .c y .o.
-CC = gcc 
-CFLAGS = -Wall -Wextra -Werror
+
 RM = rm -f
 
 #esta es la funcion principal.
-$(NAME): $(OBJECTS) $(INCLUDE)
-	$(LIB) $(NAME) $(OBJECTS)
+$(NAME): $(OBJECTS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJECTS) 
+bonus: $(BOBJECTS) 
+	@$(AR) $(ARFLAGS) $(NAME) $(BOBJECTS)
+
 #compilamos la libreria.
-bonus: $(BOBJECTS)
-		$(LIB) $(NAME) $(BOBJECTS)
+
+
 %.o: %.c 
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) -c $(CFLAGS)  $< -o $@
 #esto es el borrado de objetos
 clean:
 	$(RM) $(OBJECTS) $(BOBJECTS)
@@ -79,5 +84,3 @@ re:	fclean all
 .PHONY: bonus all clean fclean re
 #sirve para indicar que no cree ningun archivo con estos nombres.
 
-##comprueba: 
-##	ar t $(NAME)

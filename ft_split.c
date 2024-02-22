@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 18:11:42 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 16:55:35 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/22 11:34:54 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,3 +85,33 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
+/*int main() {
+    char *s = "Hola,este,es,un,ejemplo";
+    char c = ',';
+
+    // Llamada a la función ft_split
+    char **result = ft_split(s, c);
+
+    // Verificación del resultado
+    if (result == NULL) {
+        printf("Error: No se pudo dividir la cadena.\n");
+        return 1;
+    }
+
+    // Imprimir las palabras divididas
+    int i = 0;
+    while (result[i] != NULL) {
+        printf("%s\n", result[i]);
+        i++;
+    }
+
+    // Liberar memoria asignada
+    i = 0;
+    while (result[i] != NULL) {
+        free(result[i]);
+        i++;
+    }
+    free(result);
+
+    return 0;
+}*/

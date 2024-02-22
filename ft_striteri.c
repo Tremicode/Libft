@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 13:21:32 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/13 12:06:32 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/21 21:30:09 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,20 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+/*#include <stdio.h>
+
+// Función de ejemplo para imprimir el índice y el carácter de una cadena
+void print_index_and_char(unsigned int index, char *c)
+{
+    printf("Índice: %u, Carácter: %c\n", index, *c);
+}
+
+int main()
+{
+    // Cadena de ejemplo
+    char str[] = "Hola como estas";
+
+    ft_striteri(str, &print_index_and_char);
+
+    return 0;
+}*/

@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 16:32:22 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 14:45:57 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/21 17:58:03 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,29 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(result + len_s1, s2, len_s2 + 1);
 	return (result);
 }
+/*#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    // Cadenas de ejemplo
+    char s1[] = "Pipas, ";
+    char s2[] = "Peladas!";
+
+    // Llamamos a ft_strjoin para concatenar las cadenas
+    char *result = ft_strjoin(s1, s2);
+
+    // Verificamos si la llamada a ft_strjoin fue exitosa
+    if (result != NULL) {
+        // Imprimimos el resultado
+        printf("Cadena concatenada: %s\n", result);
+
+        // Liberamos la memoria asignada a result
+        free(result);
+    } else {
+        printf("Error: no se pudo concatenar las cadenas.\n");
+    }
+
+    return 0;
+}
+*/

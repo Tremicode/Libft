@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:39:31 by ctremino          #+#    #+#             */
-/*   Updated: 2024/01/30 12:02:24 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/19 22:16:26 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ int	ft_atoi(const char *str)
 
 /*int	main(void)
 {
-	const char *cadena = "    -12345";
-	int numero = ft_atoi(cadena);
+	char	str[] = "12345";
+	int		num;
 
-	printf("numero convertido: %d\n", numero);
-
+	num = ft_atoi(str);
+	printf("La cadena \"%s\" convertida a entero es: %d\n", str, num);
 	return (0);
 }*/

@@ -6,14 +6,11 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:15:56 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/14 13:35:35 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/21 17:18:52 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* calcula long cadena de entrada, da memoria a la cadena nueva,
-	copoia el contenido de la cadena original a la cadena nueva*/
 
 char	*ft_strdup(const char *s1)
 {

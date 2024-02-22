@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:22:06 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 13:25:56 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/20 12:16:32 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ void	ft_bzero(void *s, size_t len)
 	}
 }
 
-/*int	main(void)
-{
-	char	s[20] = "hola a todos";
+/*int main() {
+    char str[10] = "Hello";
 
-	s[2] = '0';
-	printf("%s\n", s);
-	return (0);
+    printf("Antes de bzero: %s\n", str);
+    ft_bzero(str, 5); // Borra los primeros 5 bytes de str
+    printf("Después de bzero: %s\n", str);
+
+    return 0;
 }*/
