@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 12:48:10 by ctremino          #+#    #+#             */
-/*   Updated: 2024/01/25 22:51:58 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/24 18:43:43 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*int	main(void)
 {
 	char str[] = "hola mundo";
-	char buscar_char = 'm';
+	char buscar_char = 'h';
 	size_t buscar_size = 5;
 
 	void *result = ft_memchr(str, buscar_char, buscar_size);

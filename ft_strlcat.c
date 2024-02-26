@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:45:16 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/19 17:29:59 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/25 14:09:31 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 /*int	main(void)
 {
-	char destino[20] = "hola    ";
+	char destino[20] = "hola";
 	const char origen[] = "mundo";
 
-	size_t len = ft_strlcpy(destino, origen, sizeof(destino));
+	size_t len = ft_strlcat(destino, origen, sizeof(destino));
 
 	printf("despues concatenacion: %s\n", destino);
 	printf("long total: %zu\n", len);
 
 	return (0);
-}*/ 
+}*/

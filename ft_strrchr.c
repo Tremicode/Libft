@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 15:14:28 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/13 12:06:18 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/25 18:02:32 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char	*ft_strrchr(const char *str, int c)
 
 /*int	main(void)
 {
-	const char	*cadena = "hola mundo";
+	const char	*cadena = "hola mundo mundano";
 	int			caracter_buscar;
 	char		*resultado;
 
-	caracter_buscar = 'o';
+	caracter_buscar = 'm';
 	resultado = ft_strrchr(cadena, caracter_buscar);
 	if (resultado != NULL)
 	{

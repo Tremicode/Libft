@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 14:14:46 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/21 17:37:47 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/25 14:57:11 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,29 +35,30 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
-/*#include <stdio.h>
+/*/*#include <stdio.h>
 #include <stdlib.h> // Necesario para la función malloc
 
 
-int main()
-{
-    // Función de ejemplo para convertir un carácter a mayúsculas
+// Función de ejemplo para convertir un carácter a mayúsculas
     char to_uppercase(unsigned int index, char c)
-    {
+	{
+		index = 0;
         // Verificamos si el carácter es una letra minúscula
         if (c >= 'a' && c <= 'z') {
             // Si es así, lo convertimos a mayúsculas
-            return c - 'a' + 'A';
+            return c - 32;
         }
-        // Si no es una letra minúscula, lo dejamos sin cambios
-        return c;
+				return 0;
+    
     }
-
+	
+int main()
+{
     // Cadena de entrada
-    char input[] = "Hola, Mundo!";
+    char input[30] = "Hola, Mundo!";
 
     // Llamamos a ft_strmapi para convertir la cadena a mayúsculas
-    char *result = ft_strmapi(input, &to_uppercase);
+    char *result = ft_strmapi(input, to_uppercase);
 
     // Verificamos si la llamada a ft_strmapi fue exitosa
     if (result != NULL) {

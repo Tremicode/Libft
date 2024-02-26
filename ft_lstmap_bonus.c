@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 12:17:17 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/24 11:14:13 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/25 21:37:49 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,6 @@ int main()
         printf("%s\n", (char *)tmp->content);
         tmp = tmp->next;
     }
-
-    // Liberamos memoria de las listas
-    ft_lstclear(&lst, del_str);
-    ft_lstclear(&uppercase_list, del_str);
 
     return 0;
 }*/

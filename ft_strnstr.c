@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 11:51:11 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/12 10:55:46 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:15:49 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	result = strstr(haystack, needle);
 	printf("substring is %s\n", result);
 	return (0);
-}
-*/
+}*/

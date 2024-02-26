@@ -50,10 +50,10 @@ BSOURCES = 	ft_lstnew_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstclear_bonus.c \
 			ft_lstmap_bonus.c
-#declaracion de variable con los archivos ejecutables.
+
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
-#declaramos variables archivos objeto .c y .o.
+
 
 RM = rm -f
 
@@ -71,7 +71,7 @@ bonus: $(BOBJECTS)
 #esto es el borrado de objetos
 clean:
 	$(RM) $(OBJECTS) $(BOBJECTS)
-#borrado de los objetos y del ejecutable.
+
 fclean: clean 	
 	$(RM) $(NAME) $(BOBJECTS)
 
@@ -79,7 +79,7 @@ fclean: clean
 all: $(NAME)
 #borrado de ejecutable y los objetos.
 re:	fclean all
-#borrado de todo los bonus
+
 
 .PHONY: bonus all clean fclean re
 #sirve para indicar que no cree ningun archivo con estos nombres.
