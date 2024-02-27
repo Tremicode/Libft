@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:45:16 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/25 14:09:31 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/27 09:53:10 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 /*int	main(void)
 {
-	char destino[20] = "hola";
+	char destino[20] = "hola ";
 	const char origen[] = "mundo";
 
 	size_t len = ft_strlcat(destino, origen, sizeof(destino));

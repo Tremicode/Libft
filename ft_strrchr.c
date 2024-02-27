@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 15:14:28 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/25 18:02:32 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/27 11:17:10 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	char	*result;
-	char	almacenchar;
+	char	convertchar;
 
-	almacenchar = (char)c;
+	convertchar = (char)c;
 	result = 0;
 	while (*str != '\0')
 	{
-		if (*str == almacenchar)
+		if (*str == convertchar)
 			result = ((char *)str);
 		str++;
 	}
-	if (almacenchar == '\0')
+	if (convertchar == '\0')
 		return ((char *)str);
 	return (result);
 }

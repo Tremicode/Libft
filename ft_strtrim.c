@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 17:34:24 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/25 18:35:28 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/26 19:50:47 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 int main() {
     //Definimos una cadena de caract de ejemplo y caract recortar
-    const char *cadena = "  \tHola, mundo! \t ";
+    const char *cadena = "  \tprueba de cortado! \t ";
     const char *set = " \t";
 
     // Llamamos a ft_strtrim para recortar la cadena

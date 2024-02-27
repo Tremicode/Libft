@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:02:45 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/02 00:13:15 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/27 10:48:06 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 /*int	main(void)
 {
-	const char *cadena1 = "hola mundo";
+	const char *cadena1 = "hola mundos";
 	const char *cadena2 = "hola mundo";
 
-	int result = strncmp(cadena1, cadena2, 3);
+	int result = ft_strncmp(cadena1, cadena2, 11);
 
 	printf("resultado comparacion: %d\n", result);
 

@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 14:14:46 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/25 14:57:11 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/27 11:58:08 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,27 +35,28 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
-/*/*#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h> // Necesario para la función malloc
 
 
-// Función de ejemplo para convertir un carácter a mayúsculas
+// Función de ejemplo convertir un carácter a mayúsculas
     char to_uppercase(unsigned int index, char c)
 	{
 		index = 0;
         // Verificamos si el carácter es una letra minúscula
-        if (c >= 'a' && c <= 'z') {
+        if (c >= 'a' && c <= 'z')
+		{
             // Si es así, lo convertimos a mayúsculas
             return c - 32;
         }
-				return 0;
-    
+				return c;
+				
     }
 	
 int main()
 {
     // Cadena de entrada
-    char input[30] = "Hola, Mundo!";
+    char input[30] = "Hola,Mundo!";
 
     // Llamamos a ft_strmapi para convertir la cadena a mayúsculas
     char *result = ft_strmapi(input, to_uppercase);
