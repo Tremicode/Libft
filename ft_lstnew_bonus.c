@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 17:23:10 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/22 17:17:13 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/27 22:47:07 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(void)
 {
 	t_list	*new_nodo;
 
-	new_nodo = ft_lstnew("Hello World");
+	new_nodo = ft_lstnew("probando el nodo creado");
 	if (new_nodo != NULL)
 	{
 		printf("Creacion de un nuevo nodo: %s\n", (char *)new_nodo->content);

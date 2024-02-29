@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 12:17:17 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/25 21:37:49 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/28 22:56:21 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,62 +36,37 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (listnew);
 }
-/*#include <stdio.h>
-#include <stdlib.h>
-// Función para convertir una cadena a mayúsculas
-void *toupper_str(void *str)
+
+/*// Función para duplicar una cadena de caracteres
+void	*duplicate_string(void *content)
 {
-    char *s = (char *)str;
-    char *result = ft_strdup(s); // Duplicamoscadena parano modificar laoriginal
-    if (result == NULL)
-        return NULL;
-
-    int i = 0;
-    while (result[i] != '\0')
-    {
-        result[i] = ft_toupper(result[i]); // Convert cada caracter a mayúscula
-        i++;
-    }
-
-    return result;
+	char *str = (char *)content;
+	return ft_strdup(str);
 }
 
-// Función para liberar memoria de una cadena
-void del_str(void *str)
+int	main(void)
 {
-    free(str);
-}
+	// Creación de nodos
+	t_list *node1 = ft_lstnew("nodo numero 1");
+	t_list *node2 = ft_lstnew("nodo numero 2");
 
-int main()
-{
-    // Creamos lista de cadenas de caracteres
-    t_list *lst = NULL;
-    ft_lstadd_back(&lst, ft_lstnew("hola"));
-    ft_lstadd_back(&lst, ft_lstnew("mundo"));
-    ft_lstadd_back(&lst, ft_lstnew("esto"));
-    ft_lstadd_back(&lst, ft_lstnew("es"));
-    ft_lstadd_back(&lst, ft_lstnew("una"));
-    ft_lstadd_back(&lst, ft_lstnew("prueba"));
+	// Agregar el segundo nodo al final del primero
+	ft_lstadd_back(&node1, node2);
 
-    // Aplicamos la función toupper_str a cada elemento de la lista
-    t_list *uppercase_list = ft_lstmap(lst, toupper_str, del_str);
+	// Imprimir la lista original
+	printf("Lista Original:\n");
+	ft_lstprint(node1);
 
-    // Imprimimos lista original y la lista con cadenas convertidas a mayúsculas
-    printf("Lista original:\n");
-    t_list *tmp = lst;
-    while (tmp)
-    {
-        printf("%s\n", (char *)tmp->content);
-        tmp = tmp->next;
-    }
+	// Crear una nueva lista copiando la original y duplicando 
 
-    printf("\nLista con cadenas en mayúsculas:\n");
-    tmp = uppercase_list;
-    while (tmp)
-    {
-        printf("%s\n", (char *)tmp->content);
-        tmp = tmp->next;
-    }
+	t_list *new_lst = ft_lstmap(node1, duplicate_string, free);
 
-    return 0;
+	// Imprimir la lista copiada
+	printf("Lista Copiada:\n");
+	ft_lstprint(new_lst);
+
+	// Limpiar la memoria de la lista copiada
+	ft_lstclear(&new_lst, free);
+
+	return (0);
 }*/

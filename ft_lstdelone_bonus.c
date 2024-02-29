@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 18:50:30 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/24 13:12:26 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/28 19:03:53 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,34 +20,35 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		free(lst);
 	}
 }
-/*#include <stdio.h>
-#include <stdlib.h>
 
-// Función para liberar la memoria de un entero
-void	del_int(void *num)
+/*void	ft_lstprint(t_list *lst)
 {
-	free(num);
+	while (lst)
+	{
+		printf("%s\n", (char *)(lst->content));
+		lst = lst->next;
+	}
 }
 
 int	main(void)
 {
-	// Creamos un nodo de lista con un entero
-	int *num = malloc(sizeof(int));
-	*num = 42;
-	t_list *node = ft_lstnew(num);
+	char *str3 = ft_strdup("Nodo number 3");
+	char *str2 = ft_strdup("Nodo number 2");
+	char *str1 = ft_strdup("Nodo number 1");
 
-	// Imprimimos el contenido del nodo antes de eliminarlo
-	printf("Contenido del nodo antes de eliminarlo: %d\n",
-		*((int *)node->content));
+	t_list	*node1 = ft_lstnew(str3);
+	t_list	*node2 = ft_lstnew(str2);
+	t_list	*node3 = ft_lstnew(str1);
 
-	// Eliminamos el nodo
-	ft_lstdelone(node, del_int);
+	ft_lstadd_front(&node1, node2);
+	ft_lstadd_front(&node1, node3);
+	printf("before list:\n");
 
-	// Intentamos acceder al contenido del nodo después de eliminarlo
-	// Esto debería producir un comportamiento indefinido,
-		ya que el nodo ya no existe
-	printf("Contenido del nodo después de eliminarlo: %d\n",
-		*((int *)node->content));
+	ft_lstprint(node1);
 
+	ft_lstdelone(node3, free);
+
+	printf("After list:\n");
+	ft_lstprint(node1);
 	return (0);
 }*/

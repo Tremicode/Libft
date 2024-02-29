@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:51:33 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/24 12:52:25 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/28 22:41:49 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,42 +29,39 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = NULL;
 	}
 }
+
 /*#include <stdio.h>
 #include <stdlib.h>
 
-
-// Función para liberar la memoria asignada a un entero
-void del_int(void *num)
+void	ft_lstprint(t_list *lst)
 {
-    free(num);
+	while (lst)
+	{
+		printf("%s\n", (char *)(lst->content));
+		lst = lst->next;
+	}
 }
-
-int main()
+//Elimina y libera el nodo 'lst' y todos los consecutivos.
+//el puntero a la lista debe ser NULL.
+int	main(void)
 {
-    // Creamos una lista de enteros
-    t_list *lst = NULL;
-    for (int i = 1; i <= 5; i++)
-    {
-        int *num = malloc(sizeof(int));
-        *num = i;
-        ft_lstadd_back(&lst, ft_lstnew(num));
-    }
+	char	*str1 = ft_strdup("nodo 1");
+	char	*str2 = ft_strdup("nodo 2");
+	char	*str3 = ft_strdup("nodo 3");
 
-    // Imprimimos elementos de la lista antes de liberar la memoria
-    printf("Lista antes de liberar la memoria:\n");
-    t_list *tmp = lst;
-    while (tmp)
-    {
-        printf("%d ", *((int *)tmp->content));
-        tmp = tmp->next;
-    }
-    printf("\n");
+	t_list	*node1 = ft_lstnew(str1);
+	t_list	*node2 = ft_lstnew(str2);
+	t_list	*node3 = ft_lstnew(str3);
 
-    // Liberamos la memoria de la lista
-    ft_lstclear(&lst, del_int);
+	ft_lstadd_back(&node1, node2);
+	ft_lstadd_back(&node1, node3);
 
-    // Imprimimos mensaje indicando que la lista ha sido liberada
-    printf("La memoria de la lista ha sido liberada.\n");
+	printf("before list:\n");
+	ft_lstprint(node1);
 
-    return 0;
+	ft_lstclear(&node1, free);
+
+	printf("Delete list:\n");
+	ft_lstprint(node1);
+
 }*/

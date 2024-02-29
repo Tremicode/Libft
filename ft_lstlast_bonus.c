@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 13:30:19 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/24 11:28:04 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/28 18:29:31 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,36 +22,17 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
-/*#include <stdio.h>
-#include <stdlib.h>
-
-int	main(void)
+/*int	main(void)
 {
-	// Creamos una lista de ejemplo
-	t_list *lst = NULL;
-	ft_lstadd_back(&lst, ft_lstnew("Hola"));
-	ft_lstadd_back(&lst, ft_lstnew("Mundo"));
-	ft_lstadd_back(&lst, ft_lstnew("Este"));
-	ft_lstadd_back(&lst, ft_lstnew("es"));
-	ft_lstadd_back(&lst, ft_lstnew("un"));
-	ft_lstadd_back(&lst, ft_lstnew("ejemplo"));
+	t_list	*node1 = ft_lstnew("Nodo 1");
+	t_list	*node2 = ft_lstnew("Nodo 2");
+	t_list	*node3 = ft_lstnew("Nodo 3");
 
-	// Obtenemos el último elemento de la lista
-	t_list *last_element = ft_lstlast(lst);
+	ft_lstadd_front(&node2, node1);
+	ft_lstadd_front(&node3, node2);
 
-	// Imprimimos el contenido del último elemento
-	if (last_element != NULL)
-	{
-		printf("El último elemento de la lista es: %s\n",
-			(char *)last_element->content);
-	}
-	else
-	{
-		printf("La lista está vacía\n");
-	}
+	t_list	*lastNode = ft_lstlast(node3);
 
-	// Liberamos la memoria de la lista
-	ft_lstclear(&lst, free);
-
+	printf("Ultimo nodo de la lista: %s\n", (char *)(lastNode->content));
 	return (0);
 }*/

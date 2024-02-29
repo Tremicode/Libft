@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 11:56:07 by ctremino          #+#    #+#             */
-/*   Updated: 2024/02/26 15:57:01 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/02/27 15:32:18 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 int main(void)
 {
     // Definimos dos arrays de caracteres
-    char s1[] = "Hello people 42";
+    char s1[] = "Hello people";
     char s2[] = "Hello";
 
     // Llamamos a ft_memcmp para comparar los dos arrays hasta el quinto carácter

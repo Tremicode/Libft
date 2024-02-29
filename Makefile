@@ -57,30 +57,30 @@ BOBJECTS = $(BSOURCES:.c=.o)
 
 RM = rm -f
 
-#esta es la funcion principal.
+
 $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJECTS) 
-bonus: $(BOBJECTS) 
-	@$(AR) $(ARFLAGS) $(NAME) $(BOBJECTS)
+bonus: $(OBJECTS) $(BOBJECTS) 
+	@$(AR) $(ARFLAGS) $(NAME) $(BOBJECTS) $(OBJECTS) 
 
-#compilamos la libreria.
+
 
 
 %.o: %.c 
 	$(CC) -c $(CFLAGS)  $< -o $@
-#esto es el borrado de objetos
+
 clean:
 	$(RM) $(OBJECTS) $(BOBJECTS)
 
 fclean: clean 	
 	$(RM) $(NAME) $(BOBJECTS)
 
-#declaramos la variable para el comando clean.
+
 all: $(NAME)
-#borrado de ejecutable y los objetos.
+
 re:	fclean all
 
 
 .PHONY: bonus all clean fclean re
-#sirve para indicar que no cree ningun archivo con estos nombres.
+
 
